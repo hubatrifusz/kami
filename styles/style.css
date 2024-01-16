@@ -1,9 +1,47 @@
+@import url("variables.css");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #fff;
 }
 
 html body {
   background-color: #623b2b;
+}
+html body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: brown;
+  padding: 0 2rem 0 2rem;
+}
+html body header #title a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+html body header #options ul {
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+html body header #options ul li :hover {
+  color: #b6b6b6;
+}
+html body header #options ul li {
+  display: inline-block;
+}
+html body header #options ul li a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  transition: 150ms;
+}
+html body header #options ul li a:hover {
+  color: #b6b6b6;
 }/*# sourceMappingURL=style.css.map */
