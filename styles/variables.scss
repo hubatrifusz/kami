@@ -1,3 +1,45 @@
 $background_color: #623b2b;
 $text_color: #fff;
 $text_color_hover: #b6b6b6;
+
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-Regular.ttf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-Medium.ttf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-SemiBold.ttf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-thinitalic.otf);
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-thin.otf);
+  font-weight: 100;
+  font-style: normal;
+}

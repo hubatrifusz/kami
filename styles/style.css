@@ -1,4 +1,40 @@
 @import url("variables.css");
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-Regular.ttf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-Medium.ttf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-SemiBold.ttf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-thinitalic.otf);
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-thin.otf);
+  font-weight: 100;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +54,15 @@ html body header {
   height: 5rem;
   background-color: brown;
   padding: 0 2rem 0 2rem;
+  font-family: "Work sans";
+  text-transform: uppercase;
 }
 html body header #title a {
   text-decoration: none;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 html body header #options ul {
   list-style: none;
@@ -39,7 +79,9 @@ html body header #options ul li {
 html body header #options ul li a {
   text-decoration: none;
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
   transition: 150ms;
 }
 html body header #options ul li a:hover {
