@@ -1,5 +1,4 @@
-@import "variables.scss";
-@import url("variables.css");
+@import "../variables";
 
 * {
   margin: 0;
@@ -58,10 +57,58 @@ html {
       }
     }
 
-    // main {
-    // }
+    main {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
-    // footer {
-    // }
+      .text_block {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+
+        h1 {
+          font-family: Quincy CF;
+          font-weight: 100;
+          font-size: 2.5rem;
+          margin-bottom: 2rem;
+        }
+
+        p {
+          font-family: Work sans;
+          font-size: 1.1rem;
+        }
+      }
+
+      .picture_block {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 2rem;
+
+        img {
+          max-width: 50%;
+          object-fit: cover;
+          padding: 1rem;
+        }
+      }
+
+      .line {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        hr {
+          display: block;
+          height: 1px;
+          border: 0;
+          border-top: 1px solid #6b6b6b;
+          margin: 1em 0;
+          width: 80%;
+        }
+      }
+    }
   }
 }

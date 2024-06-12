@@ -1,4 +1,3 @@
-@import url("variables.css");
 @font-face {
   font-family: Work sans;
   src: url(/fonts/work_sans/WorkSans-Regular.ttf) format("opentype");
@@ -85,4 +84,51 @@ html body header #options ul li a {
 }
 html body header #options ul li a:hover {
   color: #b6b6b6;
+}
+html body main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+html body main .text_block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+html body main .text_block h1 {
+  font-family: Quincy CF;
+  font-weight: 100;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+html body main .text_block p {
+  font-family: Work sans;
+  font-size: 1.1rem;
+}
+html body main .picture_block {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+html body main .picture_block img {
+  max-width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1rem;
+}
+html body main .line {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+html body main .line hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #6b6b6b;
+  margin: 1em 0;
+  width: 80%;
 }/*# sourceMappingURL=style.css.map */
