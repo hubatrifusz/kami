@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trifusz Kamilla Photo</title>
 
     <link rel="stylesheet" href="styles/style/style.css">
 
@@ -14,7 +14,7 @@
 <body onload="setImageSize()">
     <header>
         <div id="title"><a href="index.html">Trifusz Kamilla Photo</a></div>
-        <nav id="options">
+        <nav class="options">
             <ul>
                 <li><a href="index.html">Kezdőlap</a></li>
                 <li><a href="#">Rólam</a></li>
@@ -45,6 +45,17 @@
 
         <div class="text_block">
             <h1>Nézz bele a munkásságomba!</h1>
+        </div>
+
+        <div class="categories">
+            <div class="image_container"><img id="categoriesImage" src="photos/lexus.jpg" alt="horse"></div>
+            <div class="options">
+                <ul>
+                    <li><a href="" id="horseOwners" onmouseover="changeImageOnHover(event)">Lovasoknak</a></li>
+                    <li><a href="" id="dogOwners" onmouseover="changeImageOnHover(event)">Kutyásoknak</a></li>
+                    <li><a href="" id="otherOwners" onmouseover="changeImageOnHover(event)">Kisállat gazdiknak</a></li>
+                </ul>
+            </div>
         </div>
     </main>
     <footer></footer>

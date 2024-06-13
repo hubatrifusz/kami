@@ -6,10 +6,16 @@ function setImageSize() {
         numberOfIMages += 1;
        }
        for (image of imageBlock.children) {
-        let imageWidth = `${(100/numberOfIMages)-10}%`
+        let imageWidth = `${(100/numberOfIMages)-10}%`;
         image.style.width = imageWidth;
        }
        numberOfIMages = 0;
     });
 
 }
+
+function changeImageOnHover(event) {
+    const image = document.querySelector('#categoriesImage');
+    image.src = `photos/${event.target.id}.jpg`
+}
+

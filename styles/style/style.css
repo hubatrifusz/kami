@@ -62,19 +62,19 @@ html body header #title a {
   font-weight: bold;
   letter-spacing: 4px;
 }
-html body header #options ul {
+html body header .options ul {
   list-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-html body header #options ul li :hover {
+html body header .options ul li :hover {
   color: #b6b6b6;
 }
-html body header #options ul li {
+html body header .options ul li {
   display: inline-block;
 }
-html body header #options ul li a {
+html body header .options ul li a {
   text-decoration: none;
   padding: 1rem;
   font-size: 0.75rem;
@@ -82,7 +82,7 @@ html body header #options ul li a {
   letter-spacing: 2px;
   transition: 150ms;
 }
-html body header #options ul li a:hover {
+html body header .options ul li a:hover {
   color: #b6b6b6;
 }
 html body main {
@@ -131,4 +131,56 @@ html body main .line hr {
   border-top: 1px solid #6b6b6b;
   margin: 1em 0;
   width: 80%;
+}
+html body main .categories {
+  width: 100%;
+  height: 38vw;
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+}
+html body main .categories .image_container {
+  position: absolute;
+  right: 0;
+  text-align: end;
+}
+html body main .categories .image_container img {
+  width: 70vw;
+  height: 40vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+html body main .categories .options {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  background-color: #2d1e1b;
+  display: flex;
+  align-items: center;
+  right: 50%;
+  padding: 5rem;
+}
+html body main .categories .options ul {
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 2rem;
+}
+html body main .categories .options ul li :hover {
+  color: #b6b6b6;
+}
+html body main .categories .options ul li a {
+  display: block;
+  font-family: Quincy CF;
+  text-decoration: none;
+  padding-left: 2rem;
+  padding: 1.5rem;
+  font-size: 2.5vw;
+  font-weight: 300;
+  letter-spacing: 2px;
+  transition: 150ms;
+}
+html body main .categories .options ul li a:hover {
+  color: #b6b6b6;
 }/*# sourceMappingURL=style.css.map */
