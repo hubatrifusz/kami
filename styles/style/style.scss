@@ -67,7 +67,7 @@ html {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 4rem;
 
         h1 {
           font-family: Quincy CF;
@@ -89,7 +89,8 @@ html {
         margin-top: 2rem;
 
         img {
-          max-width: 50%;
+          height: 16vw;
+          max-width: 60%;
           object-fit: cover;
           padding: 1rem;
         }
@@ -116,6 +117,7 @@ html {
         display: flex;
         align-items: center;
         margin-top: 4rem;
+        margin-bottom: 5rem;
 
         .image_container {
           position: absolute;
@@ -171,6 +173,32 @@ html {
               }
             }
           }
+        }
+      }
+
+      .button_block {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: center;
+
+        button {
+          border: 0;
+          background-color: $button-background;
+          color: $button-text;
+          font-family: Work sans;
+          font-size: 0.9rem;
+          font-weight: 600;
+          padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: background-color 0.15s ease-in-out;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: #fff;
+          transition: background-color 0.15s ease-in-out;
         }
       }
     }

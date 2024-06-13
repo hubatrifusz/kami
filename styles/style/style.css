@@ -95,7 +95,7 @@ html body main .text_block {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 html body main .text_block h1 {
   font-family: Quincy CF;
@@ -114,7 +114,8 @@ html body main .picture_block {
   margin-top: 2rem;
 }
 html body main .picture_block img {
-  max-width: 50%;
+  height: 16vw;
+  max-width: 60%;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 1rem;
@@ -138,6 +139,7 @@ html body main .categories {
   display: flex;
   align-items: center;
   margin-top: 4rem;
+  margin-bottom: 5rem;
 }
 html body main .categories .image_container {
   position: absolute;
@@ -188,4 +190,27 @@ html body main .categories .options ul li a {
 }
 html body main .categories .options ul li a:hover {
   color: #b6b6b6;
+}
+html body main .button_block {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}
+html body main .button_block button {
+  border: 0;
+  background-color: #2d1e1b;
+  color: #473d37;
+  font-family: Work sans;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.15s ease-in-out;
+  cursor: pointer;
+}
+html body main .button_block button:hover {
+  background-color: #fff;
+  transition: background-color 0.15s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
