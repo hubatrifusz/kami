@@ -89,8 +89,7 @@ html {
         margin-top: 2rem;
 
         img {
-          height: 16vw;
-          max-width: 60%;
+          max-width: 50%;
           object-fit: cover;
           padding: 1rem;
         }
@@ -182,8 +181,7 @@ html {
         display: flex;
         justify-content: center;
 
-        button {
-          border: 0;
+        a {
           background-color: $button-background;
           color: $button-text;
           font-family: Work sans;
@@ -193,10 +191,10 @@ html {
           letter-spacing: 1px;
           text-transform: uppercase;
           transition: background-color 0.15s ease-in-out;
-          cursor: pointer;
+          text-decoration: none;
         }
 
-        button:hover {
+        a:hover {
           background-color: #fff;
           transition: background-color 0.15s ease-in-out;
         }

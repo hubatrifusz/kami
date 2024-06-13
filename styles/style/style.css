@@ -114,8 +114,7 @@ html body main .picture_block {
   margin-top: 2rem;
 }
 html body main .picture_block img {
-  height: 16vw;
-  max-width: 60%;
+  max-width: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 1rem;
@@ -197,8 +196,7 @@ html body main .button_block {
   display: flex;
   justify-content: center;
 }
-html body main .button_block button {
-  border: 0;
+html body main .button_block a {
   background-color: #2d1e1b;
   color: #473d37;
   font-family: Work sans;
@@ -208,9 +206,9 @@ html body main .button_block button {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: background-color 0.15s ease-in-out;
-  cursor: pointer;
+  text-decoration: none;
 }
-html body main .button_block button:hover {
+html body main .button_block a:hover {
   background-color: #fff;
   transition: background-color 0.15s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

@@ -11,7 +11,7 @@ function setImageSize() {
        }
        numberOfIMages = 0;
     });
-
+    
 }
 
 function fadeInImage(event){
