@@ -48,12 +48,16 @@
         </div>
 
         <div class="categories">
-            <div class="image_container"><img id="categoriesImage" src="photos/lexus.jpg" alt="horse"></div>
+            <div class="image_container">
+                <img class="categoriesImage" id="horseOwners" src="photos/horseOwners.jpg" alt="horse">
+                <img class="categoriesImage" id="dogOwners" src="photos/dogOwners.jpg" alt="dog">
+                <img class="categoriesImage" id="otherOwners" src="photos/otherOwners.jpg" alt="other">
+            </div>
             <div class="options">
                 <ul>
-                    <li><a href="" id="horseOwners" onmouseover="changeImageOnHover(event)">Lovasoknak</a></li>
-                    <li><a href="" id="dogOwners" onmouseover="changeImageOnHover(event)">Kutyásoknak</a></li>
-                    <li><a href="" id="otherOwners" onmouseover="changeImageOnHover(event)">Kisállat gazdiknak</a></li>
+                    <li><a href="" id="horseOwners" onmouseover="fadeInImage(event)">Lovasoknak</a></li>
+                    <li><a href="" id="dogOwners" onmouseover="fadeInImage(event)">Kutyásoknak</a></li>
+                    <li><a href="" id="otherOwners" onmouseover="fadeInImage(event)">Kisállat gazdiknak</a></li>
                 </ul>
             </div>
         </div>

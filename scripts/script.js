@@ -14,8 +14,13 @@ function setImageSize() {
 
 }
 
-function changeImageOnHover(event) {
-    const image = document.querySelector('#categoriesImage');
-    image.src = `photos/${event.target.id}.jpg`
-}
+function fadeInImage(event){
+    let images = document.querySelectorAll('.categoriesImage');
 
+    images.forEach(image => {
+        image.style.opacity = 0;
+        if (image.id == event.target.id) {
+            image.style.opacity = 1;
+        }
+    });
+}

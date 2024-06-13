@@ -141,14 +141,19 @@ html body main .categories {
 }
 html body main .categories .image_container {
   position: absolute;
-  right: 0;
   text-align: end;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 html body main .categories .image_container img {
+  position: absolute;
+  right: 0;
   width: 70vw;
   height: 40vw;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: opacity 0.5s ease;
 }
 html body main .categories .options {
   position: absolute;
