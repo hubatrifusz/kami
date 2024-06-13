@@ -24,3 +24,5 @@ function fadeInImage(event){
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', setImageSize);
