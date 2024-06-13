@@ -14,6 +14,9 @@ function setImageSize() {
     
 }
 
+document.addEventListener('DOMContentLoaded', setImageSize);
+
+
 function fadeInImage(event){
     let images = document.querySelectorAll('.categoriesImage');
 
@@ -25,4 +28,8 @@ function fadeInImage(event){
     });
 }
 
-document.addEventListener('DOMContentLoaded', setImageSize);
+function fillGalleryBlock() {
+    let galleryBlock = document.querySelectorAll('.gallery_block');
+    
+
+}

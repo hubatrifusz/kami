@@ -72,15 +72,16 @@ html {
         h1 {
           font-family: Quincy CF;
           font-weight: 100;
-          font-size: 4.5rem;
-          margin-bottom: 2rem;
+          font-size: 4rem;
+          margin-bottom: 4rem;
         }
 
         h2 {
           font-family: Quincy CF;
           font-weight: 100;
-          font-size: 2.5rem;
+          font-size: 2.6rem;
           margin-bottom: 2rem;
+          margin-top: 2rem;
         }
 
         p {
@@ -88,6 +89,7 @@ html {
           font-family: Work sans;
           font-size: 1.1rem;
           line-height: 1.6rem;
+          margin-bottom: 2rem;
         }
       }
 
@@ -206,6 +208,26 @@ html {
         a:hover {
           background-color: #fff;
           transition: background-color 0.15s ease-in-out;
+        }
+      }
+
+      .gallery_block {
+        display: flex;
+        justify-content: center;
+
+        .galleryContainer {
+          width: 85%;
+          display: flex;
+
+          .side {
+            width: 50%;
+            background-color: #fff;
+            img {
+              width: 100%;
+              height: fit-content;
+              padding: 0.5rem;
+            }
+          }
         }
       }
     }
