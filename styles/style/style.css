@@ -100,12 +100,20 @@ html body main .text_block {
 html body main .text_block h1 {
   font-family: Quincy CF;
   font-weight: 100;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+html body main .text_block h2 {
+  font-family: Quincy CF;
+  font-weight: 100;
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 html body main .text_block p {
+  text-align: center;
   font-family: Work sans;
   font-size: 1.1rem;
+  line-height: 1.6rem;
 }
 html body main .picture_block {
   display: flex;
