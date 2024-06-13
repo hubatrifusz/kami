@@ -1,0 +1,214 @@
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-Regular.ttf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-Medium.ttf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Work sans;
+  src: url(/fonts/work_sans/WorkSans-SemiBold.ttf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-thinitalic.otf);
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: Quincy CF;
+  src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-thin.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html body {
+  background-color: #623b2b;
+}
+html body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  padding: 0 4rem 0 4rem;
+  font-family: "Work sans";
+  text-transform: uppercase;
+}
+html body header #title a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+html body header .options ul {
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+html body header .options ul li :hover {
+  color: #b6b6b6;
+}
+html body header .options ul li {
+  display: inline-block;
+}
+html body header .options ul li a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: 150ms;
+}
+html body header .options ul li a:hover {
+  color: #b6b6b6;
+}
+html body main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+html body main .text_block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+html body main .text_block h1 {
+  font-family: Quincy CF;
+  font-weight: 100;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+html body main .text_block p {
+  font-family: Work sans;
+  font-size: 1.1rem;
+}
+html body main .picture_block {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+html body main .picture_block img {
+  max-width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1rem;
+}
+html body main .line {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+html body main .line hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #6b6b6b;
+  margin: 1em 0;
+  width: 80%;
+}
+html body main .categories {
+  width: 100%;
+  height: 38vw;
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+html body main .categories .image_container {
+  position: absolute;
+  text-align: end;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+html body main .categories .image_container img {
+  position: absolute;
+  right: 0;
+  width: 70vw;
+  height: 40vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+html body main .categories .options {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  background-color: #2d1e1b;
+  display: flex;
+  align-items: center;
+  right: 50%;
+  padding: 5rem;
+}
+html body main .categories .options ul {
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 2rem;
+}
+html body main .categories .options ul li :hover {
+  color: #b6b6b6;
+}
+html body main .categories .options ul li a {
+  display: block;
+  font-family: Quincy CF;
+  text-decoration: none;
+  padding-left: 2rem;
+  padding: 1.5rem;
+  font-size: 2.5vw;
+  font-weight: 300;
+  letter-spacing: 2px;
+  transition: 150ms;
+}
+html body main .categories .options ul li a:hover {
+  color: #b6b6b6;
+}
+html body main .button_block {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}
+html body main .button_block a {
+  background-color: #2d1e1b;
+  color: #473d37;
+  font-family: Work sans;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.15s ease-in-out;
+  text-decoration: none;
+}
+html body main .button_block a:hover {
+  background-color: #fff;
+  transition: background-color 0.15s ease-in-out;
+}/*# sourceMappingURL=style.css.map */
