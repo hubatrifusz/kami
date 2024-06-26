@@ -27,9 +27,3 @@ function fadeInImage(event){
         }
     });
 }
-
-function fillGalleryBlock() {
-    let galleryBlock = document.querySelectorAll('.gallery_block');
-    
-
-}
