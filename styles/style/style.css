@@ -227,7 +227,7 @@ html body main .gallery_block {
   justify-content: center;
 }
 html body main .gallery_block .galleryContainer {
-  width: 85%;
+  width: 80%;
   display: flex;
 }
 html body main .gallery_block .galleryContainer .collumn {
