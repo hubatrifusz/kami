@@ -87,7 +87,7 @@ html body header .options ul li a:hover {
 }
 html body main {
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 html body main .text_block {
@@ -96,6 +96,7 @@ html body main .text_block {
   flex-direction: column;
   align-items: center;
   margin-top: 4rem;
+  width: 50%;
 }
 html body main .text_block h1 {
   font-family: Quincy CF;
@@ -110,11 +111,18 @@ html body main .text_block h2 {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
+html body main .text_block h3 {
+  font-family: Quincy CF;
+  font-weight: 100;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
 html body main .text_block p {
   text-align: center;
   font-family: Work sans;
   font-size: 1.1rem;
-  line-height: 1.6rem;
+  line-height: 1.7rem;
   margin-bottom: 2rem;
 }
 html body main .picture_block {
@@ -239,4 +247,40 @@ html body main .gallery_block .galleryContainer .collumn img {
   height: -moz-fit-content;
   height: fit-content;
   padding: 0.5rem;
+}
+html body main .banner img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 65%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+html body main .banner .text_block {
+  margin-top: 14rem;
+  width: 100%;
+}
+html body main .banner .text_block h1 {
+  font-size: 5.5rem;
+  line-height: 5rem;
+  margin-bottom: 1rem;
+}
+html body main .banner .text_block p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 10rem;
+}
+html body main .image_and_text {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+}
+html body main .image_and_text img {
+  width: 40%;
+  height: 40vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 5rem;
 }/*# sourceMappingURL=style.css.map */
