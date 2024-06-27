@@ -10,6 +10,7 @@
 html {
   body {
     background-color: $background_color;
+    scroll-behavior: smooth;
 
     header {
       display: flex;
@@ -279,6 +280,43 @@ html {
           height: 40vw;
           object-fit: cover;
           margin: 5rem;
+        }
+      }
+
+      .package_block {
+        width: 60vw;
+        height: 45vw;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        img {
+          width: 30vw;
+          height: 30vw;
+          object-fit: cover;
+        }
+
+        .background {
+          position: absolute;
+          width: 45vw;
+          height: 40vw;
+          background-color: $accent_background;
+          z-index: -1;
+        }
+
+        .text_container {
+          width: 30vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .vertical_line {
+            width: 1px;
+            height: 3rem;
+            background-color: #292929;
+            margin-bottom: -3rem;
+            margin-top: -1rem;
+          }
         }
       }
     }
