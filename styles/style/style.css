@@ -317,4 +317,19 @@ html body main .package_block .text_container .vertical_line {
   background-color: #292929;
   margin-bottom: -3rem;
   margin-top: -1rem;
+}
+html body main .training_photography {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #2d1e1b;
+}
+html body main .training_photography .container {
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+}
+html body main .training_photography .container img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

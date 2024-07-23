@@ -319,6 +319,26 @@ html {
           }
         }
       }
+
+      .training_photography {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: $accent_background;
+
+        .container {
+          width: 60vw;
+          display: flex;
+          justify-content: center;
+
+          .text_container {
+          }
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 }
