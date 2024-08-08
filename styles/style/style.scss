@@ -58,6 +58,59 @@ html {
       }
     }
 
+    footer {
+      display: flex;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Work sans";
+      text-transform: uppercase;
+
+      .icons {
+        padding: 1.5rem;
+        img {
+          height: 0.9rem;
+          margin: 0.7rem;
+          filter: invert(23%) sepia(18%) saturate(1509%) hue-rotate(332deg)
+            brightness(94%) contrast(87%);
+        }
+      }
+
+      .options {
+        ul {
+          list-style: none;
+          user-select: none;
+          li :hover {
+            color: $button-background-hover;
+          }
+          li {
+            display: inline-block;
+            a {
+              color: $background_color;
+              text-decoration: none;
+              padding: 1rem;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 2px;
+              transition: 150ms;
+            }
+
+            a:hover {
+              color: $button-background-hover;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        color: $text_color_hover;
+        text-transform: none;
+        font-size: 0.8rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+
     main {
       display: flex;
       align-items: center;
