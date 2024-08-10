@@ -93,9 +93,10 @@ html body footer {
   align-items: center;
   font-family: "Work sans";
   text-transform: uppercase;
+  margin-top: 3rem;
 }
 html body footer .icons {
-  padding: 1.5rem;
+  padding: 3rem;
 }
 html body footer .icons img {
   height: 0.9rem;
@@ -379,4 +380,18 @@ html body main .training_photography .container {
 html body main .training_photography .container img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+html body main .carousel {
+  width: 100%;
+  overflow: hidden;
+}
+html body main .carousel .carousel_image_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+html body main .carousel .carousel_image_container img {
+  height: 70vh;
+  margin-left: 5px;
+  margin-right: 5px;
 }/*# sourceMappingURL=style.css.map */
