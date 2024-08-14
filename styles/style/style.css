@@ -545,6 +545,7 @@ html body main .training_photography .container img {
 }
 
 html body main .carousel {
+  scroll-behavior: smooth;
   width: 100%;
   overflow: hidden;
 }
@@ -562,7 +563,7 @@ html body main .carousel .carousel_image_container {
 
 html body main .carousel .carousel_image_container img {
   height: 70vh;
-  margin-left: 5px;
-  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */
