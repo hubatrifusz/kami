@@ -548,6 +548,7 @@ html body main .carousel {
   scroll-behavior: smooth;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 5rem;
 }
 
 html body main .carousel .carousel_image_container {
