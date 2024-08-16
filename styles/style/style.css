@@ -4,47 +4,40 @@
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: Work sans;
   src: url(/fonts/work_sans/WorkSans-Medium.ttf) format("opentype");
   font-weight: 500;
   font-style: normal;
 }
-
 @font-face {
   font-family: Work sans;
   src: url(/fonts/work_sans/WorkSans-SemiBold.ttf) format("opentype");
   font-weight: 600;
   font-style: normal;
 }
-
 @font-face {
   font-family: Quincy CF;
   src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-regular.otf);
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: Quincy CF;
   src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-thinitalic.otf);
   font-weight: 200;
   font-style: italic;
 }
-
 @font-face {
   font-family: Quincy CF;
   src: url(/fonts/quincy_cf/Fontspring-DEMO-quincycf-thin.otf);
   font-weight: 100;
   font-style: normal;
 }
-
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #fff;
 }
 
@@ -52,28 +45,17 @@ html body {
   background-color: #623b2b;
   scroll-behavior: smooth;
 }
-
 html body header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 8rem;
   padding: 0 4rem 0 4rem;
   font-family: "Work sans";
   text-transform: uppercase;
 }
-
 html body header #title a {
   text-decoration: none;
   padding: 1rem;
@@ -81,81 +63,58 @@ html body header #title a {
   font-weight: bold;
   letter-spacing: 4px;
 }
-
 html body header .options ul {
   list-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
-
 html body header .options ul li :hover {
   color: #b6b6b6;
 }
-
 html body header .options ul li {
   display: inline-block;
 }
-
 html body header .options ul li a {
   text-decoration: none;
   padding: 1rem;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 2px;
-  -webkit-transition: 150ms;
   transition: 150ms;
 }
-
 html body header .options ul li a:hover {
   color: #b6b6b6;
 }
-
 html body footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #fff;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   font-family: "Work sans";
   text-transform: uppercase;
   margin-top: 3rem;
 }
-
 html body footer .icons {
   padding: 3rem;
 }
-
 html body footer .icons img {
   height: 0.9rem;
   margin: 0.7rem;
-  -webkit-filter: invert(23%) sepia(18%) saturate(1509%) hue-rotate(332deg) brightness(94%) contrast(87%);
-          filter: invert(23%) sepia(18%) saturate(1509%) hue-rotate(332deg) brightness(94%) contrast(87%);
+  filter: invert(23%) sepia(18%) saturate(1509%) hue-rotate(332deg) brightness(94%) contrast(87%);
 }
-
 html body footer .options ul {
   list-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
-
 html body footer .options ul li :hover {
   color: #7c4732;
 }
-
 html body footer .options ul li {
   display: inline-block;
 }
-
 html body footer .options ul li a {
   color: #623b2b;
   text-decoration: none;
@@ -163,14 +122,11 @@ html body footer .options ul li a {
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 2px;
-  -webkit-transition: 150ms;
   transition: 150ms;
 }
-
 html body footer .options ul li a:hover {
   color: #7c4732;
 }
-
 html body footer .copyright {
   color: #b6b6b6;
   text-transform: none;
@@ -178,45 +134,25 @@ html body footer .copyright {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
-
 html body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
-
 html body main .text_block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 4rem;
   width: 50%;
 }
-
 html body main .text_block h1 {
   font-family: Quincy CF;
   font-weight: 100;
   font-size: 4rem;
   margin-bottom: 4rem;
 }
-
 html body main .text_block h2 {
   font-family: Quincy CF;
   font-weight: 100;
@@ -224,7 +160,6 @@ html body main .text_block h2 {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
-
 html body main .text_block h3 {
   font-family: Quincy CF;
   font-weight: 100;
@@ -232,7 +167,6 @@ html body main .text_block h3 {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
-
 html body main .text_block p {
   text-align: center;
   font-family: Work sans;
@@ -240,38 +174,23 @@ html body main .text_block p {
   line-height: 1.7rem;
   margin-bottom: 2rem;
 }
-
 html body main .picture_block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  flex-direction: row;
   margin-top: 2rem;
 }
-
 html body main .picture_block img {
   max-width: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 1rem;
 }
-
 html body main .line {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 2rem;
 }
-
 html body main .line hr {
   display: block;
   height: 1px;
@@ -280,32 +199,21 @@ html body main .line hr {
   margin: 1em 0;
   width: 80vw;
 }
-
 html body main .categories {
   width: 100%;
   height: 38vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-top: 4rem;
   margin-bottom: 5rem;
 }
-
 html body main .categories .image_container {
   position: absolute;
   text-align: end;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 html body main .categories .image_container img {
   position: absolute;
   right: 0;
@@ -313,38 +221,28 @@ html body main .categories .image_container img {
   height: 40vw;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-
 html body main .categories .options {
   position: absolute;
   width: 30vw;
   height: 30vw;
   background-color: #2d1e1b;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   right: 50%;
   padding: 5rem;
 }
-
 html body main .categories .options ul {
   list-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   padding: 2rem;
 }
-
 html body main .categories .options ul li :hover {
   color: #b6b6b6;
 }
-
 html body main .categories .options ul li a {
   display: block;
   font-family: Quincy CF;
@@ -354,25 +252,17 @@ html body main .categories .options ul li a {
   font-size: 2.5vw;
   font-weight: 300;
   letter-spacing: 2px;
-  -webkit-transition: 150ms;
   transition: 150ms;
 }
-
 html body main .categories .options ul li a:hover {
   color: #b6b6b6;
 }
-
 html body main .button_block {
   margin-top: 2rem;
   margin-bottom: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 html body main .button_block a {
   background-color: #2d1e1b;
   color: #473d37;
@@ -382,46 +272,31 @@ html body main .button_block a {
   padding: 1.3rem 2.2rem 1.3rem 2.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
   text-decoration: none;
 }
-
 html body main .button_block a:hover {
   background-color: #fff;
-  -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
-
 html body main .gallery_block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 html body main .gallery_block .galleryContainer {
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 html body main .gallery_block .galleryContainer .collumn {
   width: 50%;
   background-color: #fff;
 }
-
 html body main .gallery_block .galleryContainer .collumn img {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 0.5rem;
 }
-
 html body main .banner img {
   position: absolute;
   width: 100%;
@@ -432,35 +307,25 @@ html body main .banner img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 html body main .banner .text_block {
   margin-top: 14rem;
   width: 100%;
 }
-
 html body main .banner .text_block h1 {
   font-size: 5.5rem;
   line-height: 5rem;
   margin-bottom: 1rem;
 }
-
 html body main .banner .text_block p {
   font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: 10rem;
 }
-
 html body main .image_and_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 75%;
 }
-
 html body main .image_and_text img {
   width: 40%;
   height: 40vw;
@@ -468,26 +333,19 @@ html body main .image_and_text img {
      object-fit: cover;
   margin: 5rem;
 }
-
 html body main .package_block {
   width: 60vw;
   height: 45vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 4rem;
 }
-
 html body main .package_block img {
   width: 30vw;
   height: 30vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 html body main .package_block .background {
   position: absolute;
   width: 45vw;
@@ -495,21 +353,12 @@ html body main .package_block .background {
   background-color: #2d1e1b;
   z-index: -1;
 }
-
 html body main .package_block .text_container {
   width: 30vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 html body main .package_block .text_container .vertical_line {
   width: 1px;
   height: 3rem;
@@ -517,54 +366,34 @@ html body main .package_block .text_container .vertical_line {
   margin-bottom: -3rem;
   margin-top: -1rem;
 }
-
 html body main .training_photography {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background-color: #2d1e1b;
 }
-
 html body main .training_photography .container {
   width: 60vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 html body main .training_photography .container img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 html body main .carousel {
   scroll-behavior: smooth;
   width: 100%;
   overflow: hidden;
   padding-bottom: 5rem;
 }
-
 html body main .carousel .carousel_image_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
 }
-
 html body main .carousel .carousel_image_container img {
   height: 70vh;
   padding-left: 5px;
   padding-right: 5px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

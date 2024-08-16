@@ -2,44 +2,56 @@
 // // const imageContainer = document.querySelector('.carousel_image_container');
 // // const carousel = document.querySelector('.carousel');
 
-// let currentImageIndex = 2;
 
-// let imageArray = Array.from(imageContainer.children);
-
-// const lastTwoClones = imageArray.slice(-2).map(img => img.cloneNode(true));
-// const firstTwoClones = imageArray.slice(0,2).map(img => img.cloneNode(true));
-
-// imageContainer.innerHTML = '';
-
-// lastTwoClones.forEach(img => imageContainer.appendChild(img));
-// imageArray.forEach(img => imageContainer.appendChild(img));
-// firstTwoClones.forEach(img => imageContainer.appendChild(img));
-
-// carousel.scrollLeft = 0;
-// carousel.style.scrollBehavior = 'auto';
-// carousel.scrollLeft = (imageContainer.children[currentImageIndex].offsetLeft - window.innerWidth/2 + imageContainer.children[currentImageIndex].clientWidth/2);
-// carousel.style.scrollBehavior = 'smooth';
 
 //TODO: -drag scrolling; -counter at the bottom; -to be reusable
 
 export class Carousel {
-    constructor(src, alt) {
-        this.scr = src;
-        this.alt = alt;
+    constructor(url, altText) {
+        this.url = url;
+        this.altText = altText;
     }
 
-    render(carouselID, imageContainerID) {
+    addImages(carouselID) {
         const container = document.getElementById(carouselID);
-        if (container) {
-            const imageContainer = document.getElementById(imageContainerID);
-            if (imageContainer) {
-                const imgElement = document.createElement('img');
-                imgElement.src = this.src;
-                imgElement.alt = this.alt
+        if (!container) return
 
-                imageContainer.appendChild(imgElement);
-            }
-        }
+        const imageContainer = container.children[0];
+
+        if (!imageContainer) return
+
+        const imgElement = document.createElement('img');
+
+        imgElement.src = this.url;
+        imgElement.alt = this.altText
+
+        imageContainer.appendChild(imgElement);
+    }
+
+    render(carouselID) {
+        const container = document.getElementById(carouselID);
+        if (!container) return
+
+        const imageContainer = container.children[0];
+        if (!imageContainer) return
+
+        let currentImageIndex = 2;
+
+        let imageArray = Array.from(imageContainer.children);
+
+        const lastTwoClones = imageArray.slice(-2).map(img => img.cloneNode(true));
+        const firstTwoClones = imageArray.slice(0,2).map(img => img.cloneNode(true));
+
+        imageContainer.innerHTML = '';
+
+        lastTwoClones.forEach(img => imageContainer.appendChild(img));
+        imageArray.forEach(img => imageContainer.appendChild(img));
+        firstTwoClones.forEach(img => imageContainer.appendChild(img));
+
+        container.scrollLeft = 0;
+        container.style.scrollBehavior = 'auto';
+        container.scrollLeft = (imageContainer.children[currentImageIndex].offsetLeft - window.innerWidth/2 + imageContainer.children[currentImageIndex].clientWidth/2);
+        container.style.scrollBehavior = 'smooth';
     }
 
     carouselScrollRight() {
