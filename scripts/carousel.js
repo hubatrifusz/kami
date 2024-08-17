@@ -1,19 +1,22 @@
-//*SETUP
-// // const imageContainer = document.querySelector('.carousel_image_container');
-// // const carousel = document.querySelector('.carousel');
-
-
-
-//TODO: -drag scrolling; -counter at the bottom; -to be reusable
+//TODO: -drag scrolling;
+//TODO: -counter at the bottom;
+//TODO: create imageContainer and buttons in the class;
+//TODO: not in the HTML;
+//TODO: resize on window resize;
+//TODO: auto scrolling;
 
 export class Carousel {
-    constructor(url, altText) {
-        this.url = url;
-        this.altText = altText;
+    constructor(carouselID) {
+        this.carouselID = carouselID;
+        this.container = document.getElementById(carouselID);
+        this.imageContainer = this.container.children[0];
+        this.currentImageIndex = 2;
+        this.rightButton = this.container.children[2];
+        this.leftButton = this.container.children[1];
     }
 
-    addImages(carouselID) {
-        const container = document.getElementById(carouselID);
+    addImages(url, altText) {
+        const container = document.getElementById(this.carouselID);
         if (!container) return
 
         const imageContainer = container.children[0];
@@ -22,54 +25,63 @@ export class Carousel {
 
         const imgElement = document.createElement('img');
 
-        imgElement.src = this.url;
-        imgElement.alt = this.altText
+        imgElement.src = url;
+        imgElement.alt = altText
 
         imageContainer.appendChild(imgElement);
     }
 
-    render(carouselID) {
-        const container = document.getElementById(carouselID);
-        if (!container) return
+    render() {
+        if (!this.container) return
+        if (!this.imageContainer) return
 
-        const imageContainer = container.children[0];
-        if (!imageContainer) return
-
-        let currentImageIndex = 2;
-
-        let imageArray = Array.from(imageContainer.children);
+        let imageArray = Array.from(this.imageContainer.children);
 
         const lastTwoClones = imageArray.slice(-2).map(img => img.cloneNode(true));
         const firstTwoClones = imageArray.slice(0,2).map(img => img.cloneNode(true));
 
-        imageContainer.innerHTML = '';
+        this.imageContainer.innerHTML = '';
+        lastTwoClones.forEach(img => this.imageContainer.appendChild(img));
+        imageArray.forEach(img => this.imageContainer.appendChild(img));
+        firstTwoClones.forEach(img => this.imageContainer.appendChild(img));
 
-        lastTwoClones.forEach(img => imageContainer.appendChild(img));
-        imageArray.forEach(img => imageContainer.appendChild(img));
-        firstTwoClones.forEach(img => imageContainer.appendChild(img));
+        this.checkImagesLoaded();
 
-        container.scrollLeft = 0;
-        container.style.scrollBehavior = 'auto';
-        container.scrollLeft = (imageContainer.children[currentImageIndex].offsetLeft - window.innerWidth/2 + imageContainer.children[currentImageIndex].clientWidth/2);
-        container.style.scrollBehavior = 'smooth';
+        this.rightButton.addEventListener('click', () => this.scrollRight());
+        this.leftButton.addEventListener('click', () => this.scrollLeft());
     }
 
-    carouselScrollRight() {
+    checkImagesLoaded() {
+        for (let img of this.imageContainer.children) {
+            img.onload = () => this.centerImages();
+        }
+    }
+
+    centerImages() {
+        this.container.scrollLeft = 0;
+        this.container.style.scrollBehavior = 'auto';
+        this.container.scrollLeft = (this.imageContainer.children[this.currentImageIndex].offsetLeft - window.innerWidth/2 + this.imageContainer.children[this.currentImageIndex].clientWidth/2);
+        this.container.style.scrollBehavior = 'smooth';
+    }
+
+    scrollRight() {
+        let isScrolling = false;
+
         if (isScrolling) return;
-        isScrolling = true
+        isScrolling = true;
     
-        carousel.scrollLeft = imageContainer.children[currentImageIndex+1].offsetLeft + imageContainer.children[currentImageIndex+1].clientWidth/2 - window.innerWidth/2;
-        currentImageIndex++;
+        this.container.scrollLeft = this.imageContainer.children[this.currentImageIndex+1].offsetLeft + this.imageContainer.children[this.currentImageIndex+1].clientWidth/2 - window.innerWidth/2;
+        this.currentImageIndex++;
     
-        if (currentImageIndex+1 == imageContainer.children.length-1) {
+        if (this.currentImageIndex+1 == this.imageContainer.children.length-1) {
     
-            carousel.style.scrollBehavior = 'auto';
-            carousel.scrollLeft = imageContainer.children[1].offsetLeft - window.innerWidth/2 + imageContainer.children[1].clientWidth/2;
-            carousel.style.scrollBehavior = 'smooth';
+            this.container.style.scrollBehavior = 'auto';
+            this.container.scrollLeft = this.imageContainer.children[1].offsetLeft - window.innerWidth/2 + this.imageContainer.children[1].clientWidth/2;
+            this.container.style.scrollBehavior = 'smooth';
     
-            currentImageIndex = 1
-            carousel.scrollLeft = imageContainer.children[currentImageIndex+1].offsetLeft + imageContainer.children[currentImageIndex+1].clientWidth/2 - window.innerWidth/2;
-            currentImageIndex++;
+            this.currentImageIndex = 1
+            this.container.scrollLeft = this.imageContainer.children[this.currentImageIndex+1].offsetLeft + this.imageContainer.children[this.currentImageIndex+1].clientWidth/2 - window.innerWidth/2;
+            this.currentImageIndex++;
         }
     
         setTimeout(() => {
@@ -77,22 +89,23 @@ export class Carousel {
         }, 500);
     }
 
-    carouselScrollLeft() {
+    scrollLeft() {
+        let isScrolling = false;
         if (isScrolling) return;
+
         isScrolling = true
+        this.container.scrollLeft = this.imageContainer.children[this.currentImageIndex-1].offsetLeft + this.imageContainer.children[this.currentImageIndex-1].clientWidth/2 - window.innerWidth/2;
+        this.currentImageIndex--;
     
-        carousel.scrollLeft = imageContainer.children[currentImageIndex-1].offsetLeft + imageContainer.children[currentImageIndex-1].clientWidth/2 - window.innerWidth/2;
-        currentImageIndex--;
+        if (this.currentImageIndex-1 == 0) {
     
-        if (currentImageIndex-1 == 0) {
+            this.container.style.scrollBehavior = 'auto';
+            this.container.scrollLeft = this.imageContainer.children[this.imageContainer.children.length-2].offsetLeft - window.innerWidth/2 + this.imageContainer.children[this.imageContainer.children.length-2].clientWidth/2;
+            this.container.style.scrollBehavior = 'smooth';
     
-            carousel.style.scrollBehavior = 'auto';
-            carousel.scrollLeft = imageContainer.children[imageContainer.children.length-2].offsetLeft - window.innerWidth/2 + imageContainer.children[imageContainer.children.length-2].clientWidth/2;
-            carousel.style.scrollBehavior = 'smooth';
-    
-            currentImageIndex = imageContainer.children.length-2;
-            carousel.scrollLeft = imageContainer.children[currentImageIndex-1].offsetLeft + imageContainer.children[currentImageIndex-1].clientWidth/2 - window.innerWidth/2;
-            currentImageIndex--;
+            this.currentImageIndex = this.imageContainer.children.length-2;
+            this.container.scrollLeft = this.imageContainer.children[this.currentImageIndex-1].offsetLeft + this.imageContainer.children[this.currentImageIndex-1].clientWidth/2 - window.innerWidth/2;
+            this.currentImageIndex--;
         }
     
         setTimeout(() => {
