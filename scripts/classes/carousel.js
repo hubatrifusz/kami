@@ -16,19 +16,15 @@ export class Carousel {
     }
 
     addImages(url, altText) {
-        const container = document.getElementById(this.carouselID);
-        if (!container) return
-
-        const imageContainer = container.children[0];
-
-        if (!imageContainer) return
+        if (!this.container) return
+        if (!this.imageContainer) return
 
         const imgElement = document.createElement('img');
 
         imgElement.src = url;
         imgElement.alt = altText
 
-        imageContainer.appendChild(imgElement);
+        this.imageContainer.appendChild(imgElement);
     }
 
     render() {
