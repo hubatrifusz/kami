@@ -1,9 +1,10 @@
-//TODO: -drag scrolling;
-//TODO: -counter at the bottom;
+//TODO: drag scrolling;
+//TODO: counter at the bottom;
 //TODO: create imageContainer and buttons in the class;
 //TODO: not in the HTML;
-//TODO: resize on window resize;
+//TODO: resize carousel on window resize;
 //TODO: auto scrolling;
+//TODO: read from json file;
 
 export class Carousel {
     constructor(carouselID) {
@@ -13,6 +14,7 @@ export class Carousel {
         this.currentImageIndex = 2;
         this.rightButton = this.container.children[2];
         this.leftButton = this.container.children[1];
+        this.isScrolling = false;
     }
 
     addImages(url, altText) {
@@ -61,10 +63,8 @@ export class Carousel {
     }
 
     scrollRight() {
-        let isScrolling = false;
-
-        if (isScrolling) return;
-        isScrolling = true;
+        if (this.isScrolling) return;
+        this.isScrolling = true;
     
         this.container.scrollLeft = this.imageContainer.children[this.currentImageIndex+1].offsetLeft + this.imageContainer.children[this.currentImageIndex+1].clientWidth/2 - window.innerWidth/2;
         this.currentImageIndex++;
@@ -81,15 +81,14 @@ export class Carousel {
         }
     
         setTimeout(() => {
-            isScrolling = false;
+            this.isScrolling = false;
         }, 500);
     }
 
     scrollLeft() {
-        let isScrolling = false;
-        if (isScrolling) return;
+        if (this.isScrolling) return;
 
-        isScrolling = true
+        this.isScrolling = true
         this.container.scrollLeft = this.imageContainer.children[this.currentImageIndex-1].offsetLeft + this.imageContainer.children[this.currentImageIndex-1].clientWidth/2 - window.innerWidth/2;
         this.currentImageIndex--;
     
@@ -105,7 +104,7 @@ export class Carousel {
         }
     
         setTimeout(() => {
-            isScrolling = false;
+            this.isScrolling = false;
         }, 500);
     
     

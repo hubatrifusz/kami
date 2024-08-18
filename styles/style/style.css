@@ -289,13 +289,31 @@ html body main .gallery_block .galleryContainer {
 }
 html body main .gallery_block .galleryContainer .collumn {
   width: 50%;
-  background-color: #fff;
 }
 html body main .gallery_block .galleryContainer .collumn img {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   padding: 0.5rem;
+  cursor: pointer;
+}
+html body main .gallery_block .focusedImageViewer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body main .gallery_block .focusedImageViewer img {
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 80%;
 }
 html body main .banner img {
   position: absolute;

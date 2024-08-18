@@ -16,9 +16,7 @@ try {
     });
     
     carousel0.render();
-} catch {
-
-}
+} catch {}
 
 try {
     const carousel1Images = [
@@ -36,9 +34,7 @@ try {
     });
     
     carousel1.render();
-} catch {
-
-}
+} catch {}
 
 try {
     const carousel2Images = [
@@ -56,9 +52,7 @@ try {
     });
     
     carousel2.render();
-} catch {
-    
-}
+} catch {}
 
 try {
     const carousel3Images = [
