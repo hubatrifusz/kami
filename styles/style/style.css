@@ -287,10 +287,10 @@ html body main .gallery_block .galleryContainer {
   width: 80%;
   display: flex;
 }
-html body main .gallery_block .galleryContainer .collumn {
+html body main .gallery_block .galleryContainer .column {
   width: 50%;
 }
-html body main .gallery_block .galleryContainer .collumn img {
+html body main .gallery_block .galleryContainer .column img {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;

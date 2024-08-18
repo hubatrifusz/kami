@@ -2,23 +2,28 @@
 
 
 export class Gallery {
-    constructor(galleryID, collumnNumber) {
+    constructor(galleryID, columnNumber) {
         this.galleryID = galleryID;
-        this.collumnNumber = collumnNumber;
+        this.columnNumber = columnNumber;
         this.container = document.getElementById(galleryID);
-        this.imageContainer = this.container.children[0];
 
         if (!this.container) return
+        
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('galleryContainer');
+        this.container.appendChild(imageContainer);
+        this.imageContainer = this.container.children[0];
+
         if (!this.imageContainer) return
 
-        this.createCollumns();
+        this.createcolumns();
     }
 
-    createCollumns() {
-        for (let i = 0; i < this.collumnNumber; i++) {
-            const collumn = document.createElement('div');
-            collumn.classList.add('collumn');
-            this.imageContainer.appendChild(collumn);
+    createcolumns() {
+        for (let i = 0; i < this.columnNumber; i++) {
+            const column = document.createElement('div');
+            column.classList.add('column');
+            this.imageContainer.appendChild(column);
         }
 
         this.addImages()
@@ -30,20 +35,15 @@ export class Gallery {
         fetch(dataFileName)
         .then(response => response.json())
         .then(imageData => {
-            let collumnList = this.imageContainer.children;
+            let columnList = this.imageContainer.children;
             let index = 0;
             imageData.forEach(item => {
                 const img = document.createElement('img');
                 img.src = item.url;
                 img.alt = item.altText; 
                 img.addEventListener('click', (e) => this.handleImageClicked(e.target));
-                if (index % 2 == 0) {
-                    collumnList[0].appendChild(img);
-                }
-                else if (index % 2 == 1) {
-                    collumnList[1].appendChild(img);
-                }
-                index++;
+                columnList[index].appendChild(img);
+                index = (index + 1) % this.columnNumber;;
             });
         })
         .catch(error => console.error('Error loading image data:', error));
