@@ -104,32 +104,6 @@ html {
         }
       }
 
-      .options {
-        ul {
-          list-style: none;
-          user-select: none;
-          li :hover {
-            color: $button-background-hover;
-          }
-          li {
-            display: inline-block;
-            a {
-              color: $background_color;
-              text-decoration: none;
-              padding: 1rem;
-              font-size: 0.75rem;
-              font-weight: 500;
-              letter-spacing: 2px;
-              transition: 150ms;
-            }
-
-            a:hover {
-              color: $button-background-hover;
-            }
-          }
-        }
-      }
-
       .copyright {
         color: $text_color_hover;
         text-transform: none;

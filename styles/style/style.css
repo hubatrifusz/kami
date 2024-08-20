@@ -124,30 +124,6 @@ html body footer .icons img {
   margin: 0.7rem;
   filter: invert(23%) sepia(18%) saturate(1509%) hue-rotate(332deg) brightness(94%) contrast(87%);
 }
-html body footer .options ul {
-  list-style: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-html body footer .options ul li :hover {
-  color: #7c4732;
-}
-html body footer .options ul li {
-  display: inline-block;
-}
-html body footer .options ul li a {
-  color: #623b2b;
-  text-decoration: none;
-  padding: 1rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  transition: 150ms;
-}
-html body footer .options ul li a:hover {
-  color: #7c4732;
-}
 html body footer .copyright {
   color: #b6b6b6;
   text-transform: none;
