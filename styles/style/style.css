@@ -56,6 +56,12 @@ html body header {
   font-family: "Work sans";
   text-transform: uppercase;
 }
+html body header .dropdown {
+  position: relative;
+}
+html body header .dropdown:hover .dropdown-content {
+  display: flex;
+}
 html body header .dropdown .dropdown-content {
   display: none;
   flex-direction: column;
@@ -68,14 +74,8 @@ html body header .dropdown .dropdown-content {
   padding: 1rem;
 }
 html body header .dropdown .dropdown-content a {
-  float: none;
-  padding: 3rem, 1rem;
-  text-decoration: none;
   display: block;
-  text-align: left;
-}
-html body header .dropdown:hover .dropdown-content {
-  display: flex;
+  text-align: center;
 }
 html body header #title a {
   text-decoration: none;
@@ -388,13 +388,41 @@ html body main .training_photography {
   background-color: #2d1e1b;
 }
 html body main .training_photography .container {
-  width: 60vw;
+  width: 80vw;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+html body main .training_photography .container .text_container {
+  text-align: center;
+  padding: 5rem 5rem;
+  width: 50%;
+}
+html body main .training_photography .container .text_container h1 {
+  color: #363636;
+  font-weight: 100;
+  padding: 0.5rem;
+}
+html body main .training_photography .container .text_container h2 {
+  color: #AB6646;
+  font-family: Work sans;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 1.2rem;
+}
+html body main .training_photography .container .text_container p {
+  color: #fff;
+  font-family: Work sans;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 html body main .training_photography .container img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 60%;
+  height: 80%;
 }
 html body main .carousel {
   scroll-behavior: smooth;
