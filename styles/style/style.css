@@ -109,7 +109,7 @@ html body header .options ul li a:hover {
 }
 html body footer {
   display: flex;
-  background-color: #fff;
+  background-color: #F8F5F1;
   flex-direction: column;
   align-items: center;
   font-family: "Work sans";
@@ -194,7 +194,7 @@ html body main .line hr {
   border: 0;
   border-top: 1px solid #6b6b6b;
   margin: 1em 0;
-  width: 80vw;
+  width: 60vw;
 }
 html body main .categories {
   width: 100%;
@@ -439,4 +439,87 @@ html body main .carousel .carousel_image_container img {
   height: 70vh;
   padding-left: 5px;
   padding-right: 5px;
+}
+html body main .white_background {
+  background-color: #F8F5F1;
+}
+html body main .facts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+html body main .facts .container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+}
+html body main .facts .container .text_container {
+  width: 20vw;
+  padding: 0.5rem;
+}
+html body main .facts .container .text_container h1 {
+  color: #623b2b;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 1px;
+  font-family: "Quincy CF";
+  font-weight: 100;
+  font-size: 1.9rem;
+}
+html body main .facts .container .text_container p {
+  color: #623b2b;
+  font-family: "Work sans";
+  padding-top: 1rem;
+  line-height: 1.5rem;
+}
+html body main .gyik {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+html body main .gyik .container {
+  width: 60%;
+}
+html body main .gyik .container h1 {
+  color: #623b2b;
+  font-family: "Quincy CF";
+  font-weight: 200;
+  font-size: 4rem;
+  margin-top: 3rem;
+}
+html body main .gyik .container .line {
+  display: flex;
+  justify-content: center;
+}
+html body main .gyik .container .line hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #b9b9b9;
+  width: 80vw;
+}
+html body main .gyik .container .text_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+html body main .gyik .container .text_container .question {
+  padding: 0.5rem;
+  width: 50%;
+  color: #623b2b;
+  font-family: "Quincy CF";
+  font-weight: 100;
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+html body main .gyik .container .text_container .answer {
+  padding: 0.5rem;
+  padding-left: 2rem;
+  width: 50%;
+  color: #623b2b;
+  font-family: "Work sans";
 }/*# sourceMappingURL=style.css.map */
