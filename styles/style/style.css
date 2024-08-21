@@ -522,4 +522,75 @@ html body main .gyik .container .text_container .answer {
   width: 50%;
   color: #623b2b;
   font-family: "Work sans";
+}
+html body main .forms {
+  display: flex;
+  flex-direction: column;
+}
+html body main .forms input[type=text] {
+  width: 40vw;
+  height: 3rem;
+  background-color: #2d1e1b;
+  border: none;
+  margin-bottom: 2rem;
+}
+html body main .forms .submit {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}
+html body main .forms .submit input[type=submit] {
+  background-color: #2d1e1b;
+  color: #473d37;
+  font-family: Work sans;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.15s ease-in-out;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+html body main .forms .submit input[type=submit]:hover {
+  background-color: #fff;
+  transition: background-color 0.15s ease-in-out;
+}
+html body main .forms .container {
+  margin-bottom: 2rem;
+}
+html body main .forms .container .radioContainer {
+  padding: 7px;
+}
+html body main .forms .container .checkboxContainer {
+  padding: 7px;
+}
+html body main .forms .container textarea {
+  width: 40vw;
+  height: 10rem;
+  background-color: #2d1e1b;
+  border: none;
+  margin-bottom: 2rem;
+}
+html body main .forms .container select {
+  width: 40vw;
+  height: 3rem;
+  background-color: #2d1e1b;
+  border: none;
+  font-family: "Work sans";
+  font-size: 1rem;
+}
+html body main .forms .container select option {
+  font-family: "Work sans";
+  font-size: 1rem;
+}
+html body main .forms label {
+  padding: 3px;
+  font-family: "Work sans";
+}
+html body main .forms p {
+  font-family: "Work sans";
+  padding-bottom: 5px;
 }/*# sourceMappingURL=style.css.map */

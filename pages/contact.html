@@ -18,7 +18,121 @@
 
     <header id="header"></header>
 
-    CONTACT
+    <main>
+        <div class="text_block">
+            <p>
+                Ha úgy érzed szeretnél belevágni a közös munkába, akkor ne habozz kitölteni ezt a rövid kis kérdőívet. Nem muszáj pontos leírást adnod, de nagyon örülök neki, ha picit mesélsz arról, hogy mit szeretnél, mi az elképzelésed, mit vársz tőlem! ☺️
+            </p>
+        </div>
+
+        <form action="" class="forms">
+            <label for="name">Név *</label>
+            <input type="text" id="name">
+
+            <label for="email">Email *</label>
+            <input type="text" id="email">
+
+            <div class="container" id="photoType">
+                <p>Milyen fotózást szeretnél?</p>
+
+                <div class="radioContainer">
+                    <input type="radio" id="szabadteri" value="Szabadtéri">
+                    <label for="szabadteri">Szabadtéri</label>
+                </div>
+    
+                <div class="radioContainer">
+                    <input type="radio" id="otthoni" value="Otthoni stúdiós">
+                    <label for="otthoni">Otthoni stúdiós</label>
+                </div>
+    
+                <div class="radioContainer">
+                    <input type="radio" id="alom" value="Kennel/alom fotózás">
+                    <label for="alom">Kennel/alom fotózás</label>
+                </div>
+    
+                <div class="radioContainer">
+                    <input type="radio" id="kisallat" value="Kisállat stúdióban (nyuszi, hörcsög, süni, stb)">
+                    <label for="kisallat">Kisállat stúdióban (nyuszi, hörcsög, süni, stb)</label>
+                </div>
+    
+                <div class="radioContainer">
+                    <input type="radio" id="unnepi" value="Ünnepi (karácsony, szülinap, húsvét, jegyes, egyéb alkalom)">
+                    <label for="unnepi">Ünnepi (karácsony, szülinap, húsvét, jegyes, egyéb alkalom)</label>
+                </div>
+    
+                <div class="radioContainer">
+                    <input type="radio" id="rendezveny" value="Rendezvény">
+                    <label for="rendezveny">Rendezvény</label>
+                </div>
+    
+                <div class="radioContainer">
+                    <input type="radio" id="allatallomany" value="Nagyobb állatállomány fotózása">
+                    <label for="allatallomany">Nagyobb állatállomány fotózása</label>
+                </div>
+    
+                <div class="radioContainer">
+                    <input type="radio" id="egyeb" value="Egyéb">
+                    <label for="egyeb">Egyéb</label>
+                </div>
+            </div>
+            
+            <div class="container" id="packageType">
+                <p>Válassz kérlek csomagot! *</p>
+                <select name="package" id="package">
+                    <option value="choose" selected>Válassz egy lehetőséget</option>
+                    <option value="rosegold">Rosegold</option>
+                    <option value="teal">Teal</option>
+                    <option value="olive">Olive</option>
+                    <option value="breeder">Egyedi ajánlatot szeretnék (tenyésztő vagyok)</option>
+                    <option value="event">Egyedi ajánlatot szeretnék (Rendezvény)</option>
+                    <option value="marketing">Marketing célú fotózást szeretnék</option>
+                    <option value="other">Egyéb</option>
+                </select>
+            </div>
+
+            <div class="container" id="animalType">
+                <p>Milyen állatod van? *</p>
+
+                <div class="checkboxContainer">
+                    <input type="checkbox" id="dog">
+                    <label for="dog">Kutya</label>
+                </div>
+
+                <div class="checkboxContainer">
+                    <input type="checkbox" id="cat">
+                    <label for="cat">Macska</label>
+                </div>
+
+                <div class="checkboxContainer">
+                    <input type="checkbox" id="horse">
+                    <label for="horse">Ló</label>
+                </div>
+
+                <div class="checkboxContainer">
+                    <input type="checkbox" id="smallPet">
+                    <label for="smallPet">Kisállat (nyuszi, hörcsög, süni, stb.)</label>
+                </div>
+
+                <div class="checkboxContainer">
+                    <input type="checkbox" id="other">
+                    <label for="other">Egyéb</label>
+                </div>
+            </div>
+
+            <label>Hány fővel, hány állattal szeretnél fotózkodni? *</label>
+            <input type="text" id="totalPetsAndPeople">
+
+            <div class="container" id="ideas">
+                <p>Írd meg nekem az elképzelésed</p>
+                <textarea></textarea>
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="Küldd el az üzenetem!">
+            </div>
+
+        </form>
+    </main>
 
     <footer id="footer"></footer>
 
